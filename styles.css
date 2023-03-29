@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-face {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  backface-visibility: hidden;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.card-back {
+  background-color: darkgray;
+}
+
+.card-front {
+  background-color: lightgray;
+  transform: rotateY(180deg);
+}
+
+.card.revealed {
+  transform: rotateY(180deg);
+}
+
+button {
+  margin: 20px;
+}
